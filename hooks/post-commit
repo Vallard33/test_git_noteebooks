@@ -1,0 +1,10 @@
+#!/bin/sh
+# Amende le commit pour inclure les fichiers _ntb.py nouvellement ajoutés
+if git diff --cached --quiet; then
+    # Pas de nouveaux fichiers à ajouter
+    exit 0
+fi
+
+echo "Ajout des fichiers _ntb.py manquants au dernier commit..."
+git commit --amend --no-edit
+echo "Commit amendé avec les fichiers synchronisés."
