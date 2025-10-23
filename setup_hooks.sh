@@ -9,7 +9,7 @@ fi
 
 # 2. Installation des hooks
 echo "Installation des hooks Git..."
-cp scripts/hooks/* .git/hooks/
+cp hooks/* .git/hooks/
 chmod +x .git/hooks/*
 
 # 3. Création ou mise à jour des fichiers .ipynb à partir des _ntb.py
