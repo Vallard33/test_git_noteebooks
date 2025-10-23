@@ -11,7 +11,7 @@ fi
 for ipynb_file in *.ipynb; do
     py_file="${ipynb_file%.ipynb}_ntb.py"
     echo "Traitement de $ipynb_file -> $py_file..."
-    python -m jupytext --to py "$ipynb_file" --output "$py_file"
+    python -m jupytext --to py "$ipynb_file" --output "$py_file" --update
     git add "$py_file"
 done
 
